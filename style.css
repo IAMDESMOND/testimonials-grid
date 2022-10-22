@@ -1,6 +1,116 @@
+body {
+  background: #ecf2f8;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500; }
+
 .main__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
+  grid-template-columns: repeat(4, 15.5rem);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "daniels daniels walters kira" "harmon patrick patrick kira";
+  color: white;
+  grid-gap: 20px 25px;
+  margin: 7rem 0rem;
+  justify-content: center;
+  align-content: center; }
+  .main__container article:nth-child(1) {
+    background: url(images/bg-pattern-quotation.svg) right 50px top no-repeat #7541c8;
+    grid-area: daniels;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1rem 1.5rem; }
+    .main__container article:nth-child(1) img {
+      border: 2px solid rgba(255, 255, 255, 0.3); }
+  .main__container article:nth-child(2) {
+    background-color: #48556a;
+    grid-area: walters;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1rem 1.5rem; }
+  .main__container article:nth-child(3) {
+    background: white;
+    color: #48556a;
+    grid-area: kira;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1rem 1.5rem; }
+  .main__container article:nth-child(4) {
+    background: white;
+    color: #48556a;
+    grid-area: harmon;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1rem 1.5rem; }
+  .main__container article:nth-child(5) {
+    background: #19212e;
+    color: white;
+    grid-area: patrick;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1rem 1.5rem; }
+    .main__container article:nth-child(5) img {
+      border: 2px solid #7541c8; }
+
+article .person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem; }
+  article .person img {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem; }
+  article .person span {
+    font-size: 1rem; }
+    article .person span span {
+      opacity: 50%;
+      font-size: 0.8rem; }
+article .bold-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem; }
+article .testimonial {
+  opacity: 70%; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem; }
+
+.attribution a {
+  color: #3e52a3; }
+
+@media screen and (max-width: 1240px) {
+  .main__container {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 15.5rem);
+    grid-template-areas: "daniels daniels walters" "harmon patrick patrick" "kira kira kira";
+    margin: 4rem auto; } }
+@media screen and (max-width: 815px) {
+  .main__container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 15.5rem);
+    grid-template-areas: "daniels daniels" "walters harmon" "patrick patrick" "kira kira";
+    margin: 4rem auto; } }
 
 /*# sourceMappingURL=style.css.map */

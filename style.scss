@@ -1,5 +1,135 @@
+$white: hsl(0, 0%, 100%);
+@mixin items_general_style() {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+body {
+    background: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed";
+    font-weight: 500;
+}
+
 .main__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 15.5rem);
     grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "daniels daniels walters kira"
+                         "harmon patrick patrick kira";
+    color: $white;
+    grid-gap: 20px 25px;
+    margin: 7rem 0rem;
+    justify-content: center;
+    align-content: center;
+
+
+    article:nth-child(1) {
+        background: url(images/bg-pattern-quotation.svg) right 50px top no-repeat hsl(263, 55%, 52%);
+        grid-area: daniels;
+        @include items_general_style();
+
+         img {
+            border: 2px solid hsla(0, 0%, 100%, 0.3);
+         }
+    }
+    
+    article:nth-child(2) {
+        background-color: hsl(217, 19%, 35%);
+        grid-area: walters;
+        @include items_general_style();
+    }
+    
+    article:nth-child(3) {
+        background: $white;
+        color: hsl(217, 19%, 35%);
+        grid-area: kira;
+        @include items_general_style();
+    }
+    
+    article:nth-child(4) {
+        background: $white;
+        color: hsl(217, 19%, 35%);
+        grid-area: harmon;
+        @include items_general_style();
+    }
+    
+    article:nth-child(5) {
+        background: hsl(219, 29%, 14%);
+        color: $white;
+        grid-area: patrick;
+        @include items_general_style();
+
+         img {
+            border: 2px solid hsl(263, 55%, 52%);
+         }
+    }
+}
+
+article {
+    .person {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        img{
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            border-radius: 100%;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
+
+        span {
+            font-size: 1rem;
+
+             span {
+                opacity: 50%;
+                font-size: 0.8rem;
+             }
+        }
+    }
+
+    .bold-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+    }
+
+    .testimonial {
+        opacity: 70%;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 1rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:1240px) {
+    .main__container {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 15.5rem);
+        grid-template-areas: "daniels daniels walters"
+                             "harmon patrick patrick" 
+                             "kira kira kira";
+        margin: 4rem auto;                     
+    }
+}
+
+@media screen and (max-width:815px) {
+    .main__container {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 15.5rem);
+        grid-template-areas: "daniels daniels"
+                             "walters harmon"
+                             "patrick patrick" 
+                             "kira kira";
+        margin: 4rem auto;                     
+    }
 }
