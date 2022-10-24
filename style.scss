@@ -12,7 +12,7 @@ body {
     background: hsl(210, 46%, 95%);
     font-size: 13px;
     font-family: "Barlow Semi Condensed";
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .main__container {
@@ -42,6 +42,7 @@ body {
         background-color: hsl(217, 19%, 35%);
         grid-area: walters;
         @include items_general_style();
+        box-shadow: 2px 2px 3px black;
     }
     
     article:nth-child(3) {
@@ -75,6 +76,7 @@ article {
         display: flex;
         align-items: center;
         margin-bottom: 1.5rem;
+        font-weight: 500;
 
         img{
             -webkit-border-radius: 100%;
@@ -98,7 +100,7 @@ article {
     }
 
     .bold-text {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 600;
         margin-bottom: 1.2rem;
     }
@@ -130,6 +132,18 @@ article {
                              "walters harmon"
                              "patrick patrick" 
                              "kira kira";
-        margin: 4rem auto;                     
+        margin: 3.5rem auto;                     
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .main__container {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+
+        article:nth-child(3){
+          order: 5;
+        }
     }
 }
